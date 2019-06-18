@@ -1,3 +1,44 @@
-<p>
-  api-table works!
-</p>
+<div class="container-fluid">
+
+  <div class="row">
+      <div class="col-sm-12">
+          <h3>API Data</h3>
+          <hr>
+      </div>
+  </div>
+
+  <div class="row">
+
+      <div class="col-sm-12">
+
+          <table class="table">
+
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Album ID</th>
+                      <th>Title</th>
+                      <th>URL</th>
+                      <th>Thumbnail URL</th>
+                  </tr>
+              </thead>
+
+
+              <tbody>
+                  <tr *ngFor="let data of dataSource">
+                      <td>{{ data.id }}</td>
+                      <td>{{ data.albumId }}</td>
+                      <td>{{ data.title }}</td>
+                      <td><a [href]="data.url" target="_blank">Show Image</a></td>
+                      <td><a [href]="data.thumbnailUrl" target="_blank">Show Thumbnail</a></td>
+                  </tr>
+              </tbody>
+
+
+          </table>
+
+      </div>
+
+  </div>
+
+</div>
