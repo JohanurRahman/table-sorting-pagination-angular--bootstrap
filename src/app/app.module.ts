@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ApiTableComponent } from './component/api-table/api-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ApiTableComponent
   ],
   imports: [
     BrowserModule
