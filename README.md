@@ -1,27 +1,34 @@
-# Bootstrap Table
+# Angular - Bootstrap Table With Sorting & Pagination
+A basic application made using <b>Angular 8</b> and <b>Bootstrap 4</b>.  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+## Demo
+[Live Demo](https://stackblitz.com/edit/ng-bootstrap-table-04791)
 
-## Development server
+## Packages Used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+| Package Name  | Version |
+| ------------- | ------------- |
+| Angular CLI  | 8.0.3  |
+| Bootstrap  | 4.3.1  |
+| ng2-order-pipe  | 0.1.5  |
+| ngx-pagination  | 4.0.0  |
 
-## Code scaffolding
+## Project setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Install dependencies
+```
+npm install
+```
+#### Run the server
+```
+ng serve -o
+```
 
-## Build
+## App Screenshot
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<kbd>
+  
+  ![32](https://user-images.githubusercontent.com/42015613/59680040-3a6f5a00-91f2-11e9-81c9-37db0031a05e.PNG)
+  
+</kbd>
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
