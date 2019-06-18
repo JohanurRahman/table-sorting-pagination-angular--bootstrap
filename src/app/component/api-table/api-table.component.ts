@@ -12,6 +12,11 @@ export class ApiTableComponent implements OnInit {
 
   dataSource: IApiTable[];
 
+  id: number;
+  albumId: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
   selectedRowIndex: number;
 
   constructor(private _apiResponse: ApiTableService) { }
@@ -41,6 +46,11 @@ export class ApiTableComponent implements OnInit {
   // Clicked cell highlight
   onClick(row: any) {
     this.selectedRowIndex = row.id;
+    this.id = row.id;
+    this.albumId = row.albumId;
+    this.title = row.title;
+    this.url = row.url;
+    this.thumbnailUrl = row.thumbnailUrl;
   }
 
 }

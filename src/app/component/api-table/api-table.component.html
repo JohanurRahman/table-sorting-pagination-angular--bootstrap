@@ -1,59 +1,100 @@
 <div class="container-fluid">
 
-  <div class="row">
-      <div class="col-sm-12">
-          <h3>API Data</h3>
-          <hr>
-      </div>
-  </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>API Data</h3>
+            <hr>
+        </div>
+    </div>
 
-  <div class="row">
+    <div class="row">
 
-      <div class="col-sm-12">
+        <div class="col-sm-8">
 
-          <table class="table">
+            <table class="table">
 
-              <thead>
-                  <tr>
-                    <th (click)="sort('id')">ID &nbsp;
-                        <span *ngIf="key =='id'" [ngClass]="sorted == false ? 'fas fa-sort-up' : 'fas fa-sort-down'"></span>
-                    </th>
+                <thead>
+                    <tr>
+                        <th (click)="sort('id')">ID &nbsp;
+                            <span *ngIf="key =='id'"
+                                [ngClass]="sorted == false ? 'fas fa-sort-up' : 'fas fa-sort-down'"></span>
+                        </th>
 
-                    <th (click)="sort('albumId')">Album ID
-                        <span *ngIf="key =='albumId'" [ngClass]="sorted == false ? 'fas fa-sort-up' : 'fas fa-sort-down'"></span>
-                    </th>
+                        <th (click)="sort('albumId')">Album ID
+                            <span *ngIf="key =='albumId'"
+                                [ngClass]="sorted == false ? 'fas fa-sort-up' : 'fas fa-sort-down'"></span>
+                        </th>
 
-                    <th (click)="sort('title')">Title
-                        <span *ngIf="key =='title'" [ngClass]="sorted == false ? 'fas fa-sort-up' : 'fas fa-sort-down'"></span>
-                    </th>
+                        <th (click)="sort('title')">Title
+                            <span *ngIf="key =='title'"
+                                [ngClass]="sorted == false ? 'fas fa-sort-up' : 'fas fa-sort-down'"></span>
+                        </th>
 
-                    <th>URL</th>
+                        <th>URL</th>
 
-                    <th>Thumbnail URL</th>
-                  </tr>
-              </thead>
-
-
-              <tbody>
-                  <tr *ngFor="let data of dataSource | orderBy: key : sorted | paginate: { itemsPerPage: 10, currentPage: page }"
-                  [ngClass]="{'highlight': selectedRowIndex == data.id}" (click)="onClick(data)">
-                      <td>{{ data.id }}</td>
-                      <td>{{ data.albumId }}</td>
-                      <td>{{ data.title }}</td>
-                      <td><a [href]="data.url" target="_blank">Show Image</a></td>
-                      <td><a [href]="data.thumbnailUrl" target="_blank">Show Thumbnail</a></td>
-                  </tr>
-              </tbody>
+                        <th>Thumbnail URL</th>
+                    </tr>
+                </thead>
 
 
-          </table>
+                <tbody>
+                    <tr *ngFor="let data of dataSource | orderBy: key : sorted | paginate: { itemsPerPage: 10, currentPage: page }"
+                        [ngClass]="{'highlight': selectedRowIndex == data.id}" (click)="onClick(data)">
+                        <td>{{ data.id }}</td>
+                        <td>{{ data.albumId }}</td>
+                        <td>{{ data.title }}</td>
+                        <td><a [href]="data.url" target="_blank">Show Image</a></td>
+                        <td><a [href]="data.thumbnailUrl" target="_blank">Show Thumbnail</a></td>
+                    </tr>
+                </tbody>
 
-          <pagination-controls (pageChange)="page = $event" maxSize="10" responsive="true" previousLabel="Previous"
-                    nextLabel="Next" ></pagination-controls>
+
+            </table>
+
+            <div class="float-right" style="margin-top: 20px">
+
+                <pagination-controls (pageChange)="page = $event" maxSize="10" responsive="true" previousLabel="Previous"
+                    nextLabel="Next"></pagination-controls>
+
+            </div>
 
 
-      </div>
+        </div>
 
-  </div>
+        <div class="col-sm-4" style="margin-top: 5%">
+
+            <h3 style="padding: 10px;">Output</h3>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">ID</th>
+                        <td>{{ id }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Album ID</th>
+                        <td>{{ albumId }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Title</th>
+                        <td>{{ title }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Image URL</th>
+                        <td> <a [href]="url" target="_blank">{{ url }}</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Thumbnail URL</th>
+                        <td> <a [href]="thumbnailUrl" target="_blank">{{ thumbnailUrl }}</a></td>
+                        <!-- <td>{{ thumbnailUrl }}</td> -->
+                    </tr>
+                    <tr>
+                        <th></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 
 </div>
