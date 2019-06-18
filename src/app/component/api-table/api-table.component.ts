@@ -23,6 +23,8 @@ export class ApiTableComponent implements OnInit {
 
   }
 
+  page: number = 1;
+
   key: string = 'id';
   sorted: boolean = false;
 
