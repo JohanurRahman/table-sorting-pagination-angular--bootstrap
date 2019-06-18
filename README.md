@@ -8,7 +8,6 @@ A basic application made using <b>Angular 8</b> and <b>Bootstrap 4</b>.
 
 | Package Name  | Version |
 | ------------- | ------------- |
-| Angular CLI  | 8.0.3  |
 | Bootstrap  | 4.3.1  |
 | ng2-order-pipe  | 0.1.5  |
 | ngx-pagination  | 4.0.0  |
