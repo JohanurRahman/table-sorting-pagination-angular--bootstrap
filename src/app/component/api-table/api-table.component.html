@@ -35,7 +35,8 @@
 
 
               <tbody>
-                  <tr *ngFor="let data of dataSource | orderBy: key : sorted | paginate: { itemsPerPage: 10, currentPage: page }">
+                  <tr *ngFor="let data of dataSource | orderBy: key : sorted | paginate: { itemsPerPage: 10, currentPage: page }"
+                  [ngClass]="{'highlight': selectedRowIndex == data.id}" (click)="onClick(data)">
                       <td>{{ data.id }}</td>
                       <td>{{ data.albumId }}</td>
                       <td>{{ data.title }}</td>

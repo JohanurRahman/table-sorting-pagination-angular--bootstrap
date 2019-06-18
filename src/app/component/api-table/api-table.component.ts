@@ -12,6 +12,8 @@ export class ApiTableComponent implements OnInit {
 
   dataSource: IApiTable[];
 
+  selectedRowIndex: number;
+
   constructor(private _apiResponse: ApiTableService) { }
 
   ngOnInit() {
@@ -23,14 +25,22 @@ export class ApiTableComponent implements OnInit {
 
   }
 
+  // Pagination
   page: number = 1;
 
+  // Sorting
   key: string = 'id';
   sorted: boolean = false;
 
   sort(key: string) {
     this.key = key;
     this.sorted = !this.sorted;
+  }
+
+
+  // Clicked cell highlight
+  onClick(row: any) {
+    this.selectedRowIndex = row.id;
   }
 
 }
