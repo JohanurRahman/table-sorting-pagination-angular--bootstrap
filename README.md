@@ -1,9 +1,6 @@
 # Angular - Bootstrap Table With Sorting & Pagination
 A basic application made using <b>Angular 8</b> and <b>Bootstrap 4</b>.  
 
-## Demo
-[Live Demo](https://stackblitz.com/edit/ng-bootstrap-table-04791)
-
 ## Packages Used
 
 | Package Name  | Version |
