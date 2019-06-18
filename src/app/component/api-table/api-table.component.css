@@ -9,3 +9,8 @@ h3 {
 .container-fluid {
     margin-top: 25px;
 }
+
+thead, 
+tr {
+    cursor: pointer;
+}

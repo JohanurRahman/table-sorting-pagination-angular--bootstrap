@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ApiTableComponent } from './component/api-table/api-table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

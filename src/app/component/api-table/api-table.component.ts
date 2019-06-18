@@ -23,4 +23,12 @@ export class ApiTableComponent implements OnInit {
 
   }
 
+  key: string = 'id';
+  sorted: boolean = false;
+
+  sort(key: string) {
+    this.key = key;
+    this.sorted = !this.sorted;
+  }
+
 }
